@@ -5,10 +5,9 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme'
 
 const theme = {
   overrides: {
-    MuiSelect: {
-      root: {
-        background: '#493',
-        color: '#fff',
+    MuiInputBase: {
+      input: {
+        padding: 40,
       },
     },
   },
@@ -16,7 +15,7 @@ const theme = {
 
 export default ({ children }) => {
   const originalTheme = useTheme()
-  const merged = mergeObjects(originalTheme, theme)
-  const consolidatedTheme = createMuiTheme(merged)
+  const mergedThemes = mergeObjects(originalTheme, theme)
+  const consolidatedTheme = createMuiTheme(mergedThemes)
   return <MuiThemeProvider theme={consolidatedTheme}>{children}</MuiThemeProvider>
 }

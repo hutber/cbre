@@ -15,6 +15,9 @@ export default function ButtonAppBar() {
           <Link to="/input">
             <Button>Input</Button>
           </Link>
+          <Link to="/input_usa">
+            <Button>Input USA</Button>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
